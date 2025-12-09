@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <%- include("navbar", {links}) %>
+        </header>
+        <% for (let i = 0; i < messages.length; i++) { %>
+            <h1>Message by <%= messages[i].user %> on <%= messages[i].added %></h1>
+            <p><%= messages[i].text %></p>
+            <a href="/message/<%= i %>">click to open message detail</a>
+        <% } %>
+    </body>
+</html>

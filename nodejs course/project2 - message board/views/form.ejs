@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title<%= title %></title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+<header>
+    <%- include("navbar", {links}) %>
+</header>
+        <h1>Messaging Board Form input</h1>
+        <form action="/new" method="post">
+            <label for="name">Enter you name</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="message">Enter your message</label>
+            <textarea name="message" id="message" rows="4" cols="50"></textarea><br>
+            <button type="submit">submit</button>
+        </form>
+    </body>
+</html>
